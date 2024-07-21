@@ -6,6 +6,9 @@
 
 # Notes
 
+$CURRENTVERSION=(Get-Date -Format "yyyy.MM.dd")
+$CURRENTLOCATION=((Get-Location).Path)
+
 # source variables
 # as PS1 script is easiest way it leads to Windows security warning ... so ... :-/
 #. ./variables.ps1
@@ -15,9 +18,6 @@ if (-not (Test-Path "$RF2ROOT")) {
  mkdir $VARS.RF2ROOT
  mkdir $VARS.RF2ROOT\SteamCMD
 }
-
-$CURRENTVERSION=(Get-Date -Format "yyyy.MM.dd")
-$CURRENTLOCATION=((Get-Location).Path)
 
 # download SteamCMD
 $ARGUMENTS="Invoke-RestMethod -Uri https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip -OutFile $VARS.RF2ROOT\SteamCMD\steamcmd.zip"

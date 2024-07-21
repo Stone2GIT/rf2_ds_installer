@@ -14,7 +14,7 @@ $CURRENTLOCATION=((Get-Location).Path)
 #. ./variables.ps1
 $VARS=(Get-Content -raw -Path $CURRENTLOCATION\variables.txt | ConvertFrom-StringData)
 
-if (-not (Test-Path "$RF2ROOT")) {
+if (-not (Test-Path "$VARS.RF2ROOT")) {
  mkdir $VARS.RF2ROOT
  mkdir $VARS.RF2ROOT\SteamCMD
 }

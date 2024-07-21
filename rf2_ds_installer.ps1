@@ -10,10 +10,12 @@ $CURRENTVERSION=(Get-Date -Format "yyyy.MM.dd")
 $CURRENTLOCATION=((Get-Location).Path)
 
 # source variables
-# as PS1 script is easiest way it leads to Windows security warning ... so ... :-/
-#. ./variables.ps1
-$VARS=(Get-Content -raw -Path $CURRENTLOCATION\variables.txt | ConvertFrom-StringData)
-$RF2ROOT=$VARS.RF2ROOT
+# as PS1 script is easiest way it leads to Windows security warning ...
+. ./variables.ps1
+
+# ... this is the workaround with txt file, but it has other disadvantages
+#$VARS=(Get-Content -raw -Path $CURRENTLOCATION\variables.txt | ConvertFrom-StringData)
+#$RF2ROOT=$VARS.RF2ROOT
 
 if (-not (Test-Path "$RF2ROOT")) {
  mkdir $RF2ROOT

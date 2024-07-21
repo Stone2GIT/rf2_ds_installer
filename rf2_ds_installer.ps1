@@ -1,4 +1,4 @@
- #
+#
 # simple script to install and base configure rFactor 2 dedicated server
 
 # Stone, 07/2024, info@simracingjustfair.org
@@ -44,8 +44,8 @@ $Shortcut.WorkingDirectory = "$RF2ROOT\bin64"
 $Shortcut.Save()
 
 # downloading track and car initial mod
-start-process $STEAMINSTALLDIR\steamcmd "+login anonymous +workshop_download_item 365960 2362626369 +quit" -nonewwindow -wait
-start-process $STEAMINSTALLDIR\steamcmd "+login anonymous +workshop_download_item 365960 917386837 +quit" -nonewwindow -wait
+start-process $RF2ROOT\SteamCMD\steamcmd.exe "+force_install_dir $RF2ROOT +login anonymous +workshop_download_item 365960 2362626369 +quit" -nonewwindow -wait
+start-process $RF2ROOT\SteamCMD\steamcmd.exe "+force_install_dir $RF2ROOT +login anonymous +workshop_download_item 365960 917386837 +quit" -nonewwindow -wait
 
 write-host "Starting Mod Manager in order to set modmgr folders (closing in a couple of seconds)."
 start-process $RF2ROOT\bin64\modmgr.exe "-q -c""$RF2ROOT"" "
@@ -90,7 +90,7 @@ CurRFM=0
 NumRFM=1
 RFM=$RF2ROOT\Packages\dummy.mas
 NumTrackFiles=1
-Track="AtlantaMP_2014 v1.31,0" "AtlantaMP -- Kart Layout A,0" "AtlantaMP -- Kart Layout B,0" "AtlantaMP -- Kart Layout B +,0" "AtlantaMP -- Kart Layout C,0" "AtlantaMP -- Race Track,1"
+Track="AtlantaMP_2014 v1.32,0" "AtlantaMP -- Kart Layout A,0" "AtlantaMP -- Kart Layout B,0" "AtlantaMP -- Kart Layout B +,0" "AtlantaMP -- Kart Layout C,0" "AtlantaMP -- Race Track,1"
 NumVehicleFiles=1
 Vehicle="ER_AlpineSeries_rF2 v2.00,0" "18CUP| #02 Team CMR-CFF,1" "18CUP| #04 Racing Technology,1" "18CUP| #14 Autosport GP,1" "18CUP| #15 Milan Competition,1" "18CUP| #17 Autosport GP,1" "18CUP| #18 Autosport GP,1" "18CUP| #33 Team CMR GRR,1" "18CUP| #69 Autosport GP,1" "18CUP| #76 Team CMR,1" "18GT4FRA| #026 Team CMR,1" "18GT4FRA| #036 Team CMR,1" "18GT4FRA| #061 Zentech Sport,1" "18GT4INT| #036 Team CMR,1" "19CUP| #04 Racing Technology,1" "19CUP| #05 Racing Technology,1" "19CUP| #06 Milan Competition,1" "19CUP| #09 Milan Competition,1" "19CUP| #11 Racing Technology,1" "19CUP| #15 Team CMR,1" "19CUP| #21 Milan Competition,1" "19CUP| #29 Milan Competition,1" "19CUP| #64 Team CMR,1" "19GT4EUR| #009 Team CMR,1" "19GT4EUR| #048 Team CMR,1" "19GT4FRA| #002 Team Speed Car,1" "19GT4FRA| #007 Team Speed Car,1" "19GT4FRA| #008 Team Speed Car,1" "19GT4FRA| #035 Bodemer Auto,1" "19GT4FRA| #036 Team CMR,1" "19GT4FRA| #061 Zentech Sport,1" "19GT4FRA| #076 Bodemer Auto,1" "19GT4FRA| #616 Mirage Racing,1" "19GT4FRA| #919 Mirage Racing,1" "20CUP| #03 Racing Technology,1" "20CUP| #06 Tierce Racing,1" "20CUP| #44 Autosport GP,1" "20CUP| #69 Autosport GP,1" "20GT4FRA| #008 Speed Car,1" "20GT4FRA| #022 Mirage Racing,1" "20GT4FRA| #036 Team CMR,1" "20GT4FRA| #060 Team CMR,1" "21CUP| #001 Autosport GP,1" "21CUP| #002 BL Sport,1" "21CUP| #003 Chazel Technologie Course,1" "21CUP| #005 Herrero Racing,1" "21CUP| #007 Herrero Racing,1" "21CUP| #008 Autosport GP,1" "21CUP| #009 Chazel Technologie Course,1" "21CUP| #011 Herrero Racing,1" "21CUP| #018 Patrick Roger Autosport GT,1" "21CUP| #027 Herrero Racing,1" "21CUP| #031 Meric Competition,1" "21CUP| #033 Autosport GP,1" "21CUP| #040 Race Cars Consulting,1" "21CUP| #041 Race Cars Consulting,1" "21CUP| #044 Patrick Roger Autosport GT,1" "21CUP| #045 Herrero Racing,1" "21CUP| #063 Herrero Racing,1" "21CUP| #069 LSGROUP Autosport GP,1" "21CUP| #072 Autosport GP,1" "21CUP| #093 Chazel Technologie Course,1" "21CUP| #110 Chazel Technologie Course,1" "21GT4EUR| #030 Team CMR,1" "21GT4EUR| #036 Arkadia Racing,1" "21GT4FRA| #035 Bodemer Auto,1" "21GT4FRA| #036 Team CMR,1" "21GT4FRA| #076 Bodemer Auto,1" "21GT4FRA| #110 Team CMR,1"
 NumOtherFiles=0

@@ -136,6 +136,9 @@ $ARGUMENTS="advfirewall firewall add rule name= ""rFactor 2 UDP ports"" dir=in a
 start-process "netsh" $ARGUMENTS -Verb runAs -wait
 
 # start the rf2 dedicated server with dummy mod
-mkdir $RF2ROOT\Userdata\player| out-null
+if (-not (Test-Path "$RF2ROOT\Userdata\player")) {
+ mkdir $RF2ROOT\Userdata\player
+}
+
 $ARGUMENTS=" +profile=player +rfm=dummy_10.rfm +oneclick"
 start-process -FilePath "$RF2ROOT\bin64\rFactor2 Dedicated.exe" -ArgumentList $ARGUMENTS -NoNewWindow

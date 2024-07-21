@@ -2,6 +2,8 @@
 
 ## Disclaimer
 
+Scripts provided 'as is'.
+
 ## Note
 
 ## Quick start guide

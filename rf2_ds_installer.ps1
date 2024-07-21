@@ -142,3 +142,5 @@ if (-not (Test-Path "$RF2ROOT\Userdata\player")) {
 
 $ARGUMENTS=" +profile=player +rfm=dummy_10.rfm +oneclick"
 start-process -FilePath "$RF2ROOT\bin64\rFactor2 Dedicated.exe" -ArgumentList $ARGUMENTS -NoNewWindow
+
+cd $CURRENTLOCATION

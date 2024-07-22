@@ -13,6 +13,10 @@ Scripts provided 'as is'.
 
 PS1 files need to be opened with editor once in order to get rid of the signing warning.
 
+## Videos
+
+https://youtu.be/SM7RS9Owh_U
+
 ## Quick start guide
 
 1. download the repository

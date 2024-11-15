@@ -32,6 +32,7 @@ start-process -FilePath powershell -ArgumentList $ARGUMENTS -NoNewWindow -Wait
 
 # download and install rFactor 2 dedicated server
 $ARGUMENTS="+force_install_dir $RF2ROOT +login anonymous +app_update 400300 +quit"
+cd $RF2ROOT
 start-process -FilePath "$RF2ROOT\SteamCMD\steamcmd.exe" -ArgumentList $ARGUMENTS -NoNewWindow -Wait
 
 # install vcredist ... will prompt for Admin PW
